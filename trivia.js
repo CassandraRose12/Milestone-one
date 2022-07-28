@@ -3,15 +3,6 @@
 //source simplestepcode.com and "A Smarter Way to Learn Javascript" By Mark Myers
 //some questions from https://www.ultimatequizquestions.com/alcohol-trivia-questions/
 // code to select the quiz elements
-
-const quizContiner = document.getElementById('quiz');
-const resultsConatiner = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-
-
-buildQuiz ();
-
-submitButton.addEventListener('click', showResults);
 //functions to build quiz
 (function(){
 function buildQuiz (){
@@ -36,7 +27,6 @@ myQuestions.forEach(
 );
 quizContiner.innerHTML = output.join('');
 }
-}
 
 //function to show and track results
 function showResults(){
@@ -44,30 +34,24 @@ function showResults(){
  let numCorrect = 0;
 //identify answer
  myQuestions.forEach((currentQuestion, questionNumber) => {
-  const answerConatiner = answerConatiner[questionNumber];
+  const answerConatiner = answerConatiners[questionNumber];
   const selector = `input[name=question${questionNumber}]:checked`;
   const userAnswer = (answerConatiner.querySelector(selector)|| {}).value;
-
+  //the reason for || and {} is to allow a question to remain blank without causing an error and just be undefined
   if(userAnswer === currentQuestion.correctAnswer){
      numCorrect++;
-      answerConatiner[questionNumber].style.color = 'pink';     
+      answerConatiners[questionNumber].style.color = 'pink';     
     }
     else{
       answerConatiners[questionNumber].style.color = 'lightblue';  
     }
 });
+//Show answer results
+resultsConatiner.innerHTML = `${numCorrect} out of ${myQuestions.legth}`;
 }
-
-
-
-
-
-
-
-myQuestions.forEach((currentQuestion, questionNumber) => {
-
-});
-
+const quizContiner = document.getElementById('quiz');
+const resultsConatiner = document.getElementById('results');
+const submitButton = document.getElementById('submit');
 //Questions and Answers
 const myQuestions = [
     {
@@ -98,5 +82,6 @@ const myQuestions = [
         correctAnswer: "a"
     }
 ];
-
-
+buildQuiz();
+submitButton.addEventListener('click', showResults);
+})();
