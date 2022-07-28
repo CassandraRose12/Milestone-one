@@ -8,26 +8,65 @@ const quizContiner = document.getElementById('quiz');
 const resultsConatiner = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
+
+buildQuiz ();
+
+submitButton.addEventListener('click', showResults);
 //functions to build quiz
+(function(){
 function buildQuiz (){
     const output = [];
-}
 myQuestions.forEach(
     (currentQuestion, questionNumber) => {
         const answers = [];
         for(letter in currentQuestion.answers){
             answers.push(
                 `<label>
-                <input type="radio" name="question
-            )
+                <input type="radio" name="question${questionNumber}" value="${letter}">
+                ${letter} :
+                ${currentQuestion.answers[letter]}
+                </label>`
+            );
         }
+        output.push(
+            `<div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join('')} </div>`
+        );
     }
-)
-function showResults(){}
+);
+quizContiner.innerHTML = output.join('');
+}
+}
 
-buildQuiz ();
+//function to show and track results
+function showResults(){
+ const answerConatiner =quizContiner.querySelectorAll('.answers');
+ let numCorrect = 0;
+//identify answer
+ myQuestions.forEach((currentQuestion, questionNumber) => {
+  const answerConatiner = answerConatiner[questionNumber];
+  const selector = `input[name=question${questionNumber}]:checked`;
+  const userAnswer = (answerConatiner.querySelector(selector)|| {}).value;
 
-submitButton.addEventListener('click', showResults);
+  if(userAnswer === currentQuestion.correctAnswer){
+     numCorrect++;
+      answerConatiner[questionNumber].style.color = 'pink';     
+    }
+    else{
+      answerConatiners[questionNumber].style.color = 'lightblue';  
+    }
+});
+}
+
+
+
+
+
+
+
+myQuestions.forEach((currentQuestion, questionNumber) => {
+
+});
 
 //Questions and Answers
 const myQuestions = [
@@ -59,4 +98,5 @@ const myQuestions = [
         correctAnswer: "a"
     }
 ];
+
 
