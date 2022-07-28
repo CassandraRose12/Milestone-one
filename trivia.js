@@ -45,7 +45,7 @@ function showResults(){
     else{
       answerConatiners[questionNumber].style.color = 'lightblue';  
     }
-});
+    });
 //Show answer results
 resultsConatiner.innerHTML = `${numCorrect} out of ${myQuestions.legth}`;
 }
@@ -80,8 +80,10 @@ const myQuestions = [
             c: "Cosmopolitan"
         },
         correctAnswer: "a"
+
     }
 ];
 buildQuiz();
 submitButton.addEventListener('click', showResults);
 })();
+

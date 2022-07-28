@@ -1,6 +1,7 @@
 /*center logo and reduce white space*/
 body {
-background: url('Assets/Orange\ Colorful\ Juice\ Drink\ Product\ Logo\ \(2\).png') no-repeat center center fixed; 
-background-size: cover;
-background-repeat: no-repeat;
-}
+    background: url('Assets/Orange\ Colorful\ Juice\ Drink\ Product\ Logo\ \(2\).png') no-repeat center center fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+ 

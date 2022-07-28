@@ -1,0 +1,27 @@
+{
+  "name": "milestone-one",
+  "version": "1.0.0",
+  "description": "\"First Milestone Project\",",
+  "main": "trivia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " node trivia.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CassandraRose12/Milestone-one.git"
+  },
+  "keywords": [
+    "cocktail",
+    "trivia",
+    "Shake",
+    "It",
+    "Up"
+  ],
+  "author": "Cassandra Collins Cassandra.r.collins16@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CassandraRose12/Milestone-one/issues"
+  },
+  "homepage": "https://github.com/CassandraRose12/Milestone-one#readme"
+}
