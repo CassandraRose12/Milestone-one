@@ -1,7 +1,66 @@
 /*center logo and reduce white space*/
-body {
-    background: url('Assets/Orange\ Colorful\ Juice\ Drink\ Product\ Logo\ \(2\).png') no-repeat center center fixed; 
-    background-size: cover;
-    background-repeat: no-repeat;
-    }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family:fantasy;
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('Assets/Orange\ Colorful\ Juice\ Drink\ Product\ Logo\ \(2\).png');
+    
+}
+
+.button{
+   border-radius: 5px;
+   background-color: lightsalmon;
+   font-size: large;
+    
+}
+
+.btn-grid{
+    display: grid;
+    gap: 25px;
+    position: relative;
+    padding: 20px 46px;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 800px;
+    max-width: 75%;
+    border: 2px solid lightblue ;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px 5px lightpink ;
+   
+  }
+  .start-button{
+      font-size: medium;
+  }
+
+  .next-button{
+      font-size: medium;
+  }
  
+ #question {
+     font-size: 24px;
+ }
+
+ .controls{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .hide{
+     display: none;
+ };
+

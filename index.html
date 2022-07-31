@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bar.CSS">
-    <title>Milestone One</title>
+    <script src="trivia.js"></script>
+    <title>Practice</title>
 </head>
 <body>
-    <!--create trivia conatiner-->
-    <div class=""quiz-container">
-    <div id="quiz"></div>
-    </div>
-    <button id="previous">I blacked out! (Back)</button>
-    <button id="next">Bartender hit me! (Next))</button>
-    <button id="submit">Bottoms Up! (Submit)</button>
-    <div id="results"></div>
-    <script type="text/javascript" src="trivia.js"></script>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="choices-button" class="btn-grid">
+            <button class="button">Choices 1</button>
+            <button class="button">Choices 2</button>
+            <button class="button">Choices 3</button>
+        </div>      
+        </div>
+        <div class="controls">
+            <button id="start-button" class="start-button">Cheers! (start)</button>
+            <button id="next-button" class="next-button" class="hide">Another one bartender! (next-button)</button>
+        </div>
+    </div>  
 </body>
 </html>
