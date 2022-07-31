@@ -8,16 +8,21 @@
 
 // code to select the trivia elements
 //functions to build trivia
-const startButton = document.getElementById('start-button');
+
+const startButton = document.getElementById('start-button')
+const questionContainerElement = document.getElementById('question-container')
 
 startButton.addEventListener('click', buildTrivia)
    
-   function buildTrvia(){
-       console.log('Started')
+   function buildTrivia(){
+       //console.log('Started')
+    startButton.classList.add('hide')
+    questionContainerElement.classList.remove('hide')
+    nextQuestion()
 
     }
 
-    function setNextQuestion(){
+    function nextQuestion(){
 
 
     }
@@ -25,12 +30,13 @@ startButton.addEventListener('click', buildTrivia)
     function selectChoice(){
 
     }
-    //Questions and Answers
+    //Questions and Answers\
+    let currentQuestion = 0
     var questions = [
         {
-            question: "When was the earliest alcoholic beverage made?",
-            choices: ["7000–6600 BCE", "1620-1700", "1800-1900"],
-             answer: 1
+            "question": 'When was the earliest alcoholic beverage made?',
+            "choices": ["7000–6600 BCE", "1620-1700", "1800-1900"],
+             "answer": 1
         },
         {
             question: "What ingredients make up a Screwdriver?",
@@ -47,14 +53,14 @@ startButton.addEventListener('click', buildTrivia)
     var score = 0;
 
     //loop through questions 
-    for (var i=0; i < questions.length; i++){
-          if(results === questions[i].answer){
-              score++;
-              alert("Correct!");
-              } else {
-                alert("Wrong!");
-             } 
+   for (var i=0; i < questions.length; i++){
+         if(results === questions[i].answer){
+            score++;
+            alert("Correct!");
+            } else {
+            alert("Wrong!");
+         } 
 
-          }  
+        }  
     alert(score + "/" + questions.length);
 

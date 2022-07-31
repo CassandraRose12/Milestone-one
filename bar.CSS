@@ -3,7 +3,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family:fantasy;
+    font-family:'Franklin Gothic Medium';
+
 }
 body{
     padding: 0;
@@ -39,10 +40,14 @@ body{
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 0 10px 5px lightpink ;
+    background-color: lightcyan;
    
   }
   .start-button{
       font-size: medium;
+      background-color: lightsalmon;
+      font-weight: bold;
+      padding: 10px 20px;
   }
 
   .next-button{
