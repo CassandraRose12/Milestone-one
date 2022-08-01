@@ -41,6 +41,10 @@ body{
     padding: 15px;
     box-shadow: 0 0 10px 5px lightpink ;
     background-color: lightcyan;
+    position: relative;
+    top: 80px;
+
+    
    
   }
   .start-button{
